@@ -8,7 +8,7 @@ namespace Trenins
     {
         public void Izsauc()
         {
-            Uzdevums26();
+            Uzdevums27();
         }
         private void Uzdevums1()
         {
@@ -498,7 +498,34 @@ namespace Trenins
             
         }
 
+        private void Uzdevums27()
+        {
+            string zvaigzne = "*";
+            string atmina = "";
+            Console.WriteLine("Ievadi rindu skaitu");
+            string input = Console.ReadLine();
+            int ievade = Convert.ToInt32(input);
+            string[] arrays = new string[ievade];
+
+            for (int i=0; i<ievade; i++)
+            {
+                arrays[i] = atmina + zvaigzne;
+                atmina = arrays[i];
+            }
+
+            for (int i=0; i<ievade; i++)
+            {
+                Console.WriteLine(arrays[i]);
+            }
+
+            for (int i = ievade-1; i >= 0; i--)
+            {
+                Console.WriteLine(arrays[i]);
+            }
+        }
+
     }
+
 
 }
 
