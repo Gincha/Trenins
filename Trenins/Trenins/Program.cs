@@ -8,8 +8,11 @@ namespace Trenins
         {
              Matematika darbibas = new Matematika();
              Uzdevumi uzd = new Uzdevumi();
-             uzd.Izsauc();
+            Pokemoni uzdevums = new Pokemoni();
 
+            uzd.Izsauc();
+
+            Console.ReadLine();
         }
     }
 }

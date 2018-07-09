@@ -8,7 +8,7 @@ namespace Trenins
     {
         public void Izsauc()
         {
-            Uzdevums28();
+            Uzdevums48();
         }
         private void Uzdevums1()
         {
@@ -341,22 +341,22 @@ namespace Trenins
             Console.ReadLine();
         }
 
-        private void Uzdevums18() { 
-        Console.WriteLine("Ievadi 1 no 4 cipariem lai redzetu videjo");
-        int cipars1 = Convert.ToInt32(Console.ReadLine());
+        private void Uzdevums18() {
+            Console.WriteLine("Ievadi 1 no 4 cipariem lai redzetu videjo");
+            int cipars1 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Ievadi 2 no 4 cipariem lai redzetu videjo");
-        int cipars2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ievadi 2 no 4 cipariem lai redzetu videjo");
+            int cipars2 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Ievadi 3 no 4 cipariem lai redzetu videjo");
-        int cipars3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ievadi 3 no 4 cipariem lai redzetu videjo");
+            int cipars3 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Ievadi 4 no 4 cipariem lai redzetu videjo");
-        int cipars4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ievadi 4 no 4 cipariem lai redzetu videjo");
+            int cipars4 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Videjais no cipariem " + cipars1 + "," + cipars2 + "," + cipars3 + "," + cipars4 + "ir" + ((cipars1 + cipars2 + cipars3 + cipars4) / 4));
+            Console.WriteLine("Videjais no cipariem " + cipars1 + "," + cipars2 + "," + cipars3 + "," + cipars4 + "ir" + ((cipars1 + cipars2 + cipars3 + cipars4) / 4));
 
-        Console.ReadLine();
+            Console.ReadLine();
         }
 
         private void Uzdevums19() {
@@ -381,8 +381,8 @@ namespace Trenins
             Console.ReadLine();
 
 
-            
-          }
+
+        }
 
         private void Uzdevums21()
         {
@@ -450,7 +450,7 @@ namespace Trenins
             {
                 Console.WriteLine(rezultats);
             }
-            
+
         }
 
         private void Uzdevums24()
@@ -469,14 +469,14 @@ namespace Trenins
 
         private void Uzdevums25()
         {
-            
+
             int a = 1;
             while (a <= 10)
             {
                 Console.WriteLine(a);
-                a+=2; 
+                a += 2;
             }
-         }
+        }
 
 
         private void Uzdevums26()
@@ -484,8 +484,8 @@ namespace Trenins
 
             Random numGen = new Random();
 
-        int numOfAttempts = 0;
-        int attempt = 0;
+            int numOfAttempts = 0;
+            int attempt = 0;
 
             while (attempt != 6)
             {
@@ -494,8 +494,8 @@ namespace Trenins
                 numOfAttempts++;
 
             }
-    Console.WriteLine("Mums vajadzeja " + numOfAttempts + "reizes lai uzmestu 6");
-            
+            Console.WriteLine("Mums vajadzeja " + numOfAttempts + "reizes lai uzmestu 6");
+
         }
 
         private void Uzdevums27()
@@ -507,18 +507,18 @@ namespace Trenins
             int ievade = Convert.ToInt32(input);
             string[] arrays = new string[ievade];
 
-            for (int i=0; i<ievade; i++)
+            for (int i = 0; i < ievade; i++)
             {
                 arrays[i] = atmina + zvaigzne;
                 atmina = arrays[i];
             }
 
-            for (int i=0; i<ievade; i++)
+            for (int i = 0; i < ievade; i++)
             {
                 Console.WriteLine(arrays[i]);
             }
 
-            for (int i = ievade-1; i >= 0; i--)
+            for (int i = ievade - 1; i >= 0; i--)
             {
                 Console.WriteLine(arrays[i]);
             }
@@ -539,20 +539,20 @@ namespace Trenins
             }
 
             char stripa = '-';
-             //pec copy/paste vairs kludu nerada
+            //pec copy/paste vairs kludu nerada
             for (int i = 0; i < vards.Length; i++)   // tads pats garums ka minamajam vardam 
             {
                 svitras[i] = stripa;
-                char stripBurts = svitras[i];       
+                char stripBurts = svitras[i];
 
             }
 
             Console.WriteLine("Sakam");
 
-            int skaititajs =0;                  //minesim 10 reizes
+            int skaititajs = 0;                  //minesim 10 reizes
             do
             {
-               skaititajs ++;
+                skaititajs++;
                 Console.WriteLine("Ievadi minejumu");
                 string ievade2 = Console.ReadLine();
                 char minejums = Convert.ToChar(ievade2);        //ievada burtu
@@ -562,19 +562,20 @@ namespace Trenins
                 for (int i = 0; i < vards.Length; i++)      //katram minejumam jaiet cauri visam arrayam ar minamo vardu
                 {
                     char burts = vards[i];      //bez rindinas neatpazist mainigo if`a
-                    
+
                     if (minejums == burts)          //ja minejums sakrit ar burtu minamaja varda
                     {
                         virkne = virkne + vards[i];     //ja sakrit burti tad parada burtu istaja vieta
                     }
-                    else                                
+                    else
                     {
                         virkne = virkne + svitras[i];       //ja nesakrit burti tad ieliek svitrinu burta vieta
                     }
                 }
 
                 atmina = atmina + virkne;
-                Console.WriteLine(atmina);          //parada tikai 1 ciklu
+                Console.WriteLine(atmina);          //parada tikai 1 ciklu, nesaglaba ieprieksejos
+
 
             } while (skaititajs != 10);     //iet cauri kamer nav 10 reizes
 
@@ -582,6 +583,443 @@ namespace Trenins
             Console.ReadLine();
         }
 
+        private void Uzdevums29()
+        {
+            string[] kopa = new string[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Ievadi " + (i + 1) + ". elementu");
+                string ievade = Console.ReadLine();
+                kopa[i] = ievade;
+            }
+
+            for (int i = 9; i >= 0; i--)
+            {
+                Console.Write(kopa[i] + " ");
+            }
+
+        }
+
+        private void Uzdevums30()
+        {
+            Console.WriteLine("Ievadi robezu");
+            string ievade = Console.ReadLine();
+            int robeza = Convert.ToInt32(ievade);
+
+            int summa = 0;
+            for (int i = 1; i <= robeza; i += 2)
+            {
+                summa = summa + i;
+            }
+
+            Console.Write("Summa ir " + summa);
+        }
+
+        private void Uzdevums31()
+        {
+            Console.WriteLine("Ievadi pirmo skaitli");
+            string ievade = Console.ReadLine();
+            int a = Convert.ToInt32(ievade);
+
+            Console.WriteLine("Ievadi otro skaitli");
+            string ievade2 = Console.ReadLine();
+            int b = Convert.ToInt32(ievade);
+
+            for (int i = (a - b); i < a; i++)
+            {
+                Console.Write(i);           //nerada tikai starpibas skaitlus ???
+            }
+        }
+
+        private void Uzdevums32()
+        {
+            float[] temp = new float[7];
+            float MaxVertiba = int.MinValue;
+            float MinVertiba = int.MaxValue;
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine("Ieraksti temperaturu");
+                string input = Console.ReadLine();
+                float cipars;
+                Single.TryParse(input, out cipars);
+
+                temp[i] = cipars;
+
+                if (cipars > MaxVertiba)
+                {
+                    MaxVertiba = cipars;
+                }
+                if (cipars < MinVertiba)
+                {
+                    MinVertiba = cipars;
+                }
+            }
+
+            Console.WriteLine("Lielaka vertiba ir " + MaxVertiba);
+            Console.WriteLine("Mazaka vertiba ir " + MinVertiba);
+        }
+
+        private void Uzdevums33()
+        {
+            int LastInt = 0;
+            Console.WriteLine("Ieraksti temperaturu");
+            string input = Console.ReadLine();
+            int ievade = Convert.ToInt32(input);
+
+            for (int i = 0; i <= ievade; i++)
+            {
+                for (int a = 0; a < i; a++)
+                {
+                    if (LastInt == 1)
+                    {
+                        Console.Write(0);
+                        LastInt = 0;
+
+                    } else
+                    {
+                        Console.Write(1);
+                        LastInt = 1;
+                    }
+
+                }
+                Console.WriteLine();
+            }
+
+        }
+
+        private void Uzdevums34()
+        {
+            int result = 0;
+            Console.WriteLine("Ieraksti skaitli");
+            string input = Console.ReadLine();
+            char[] cipari = input.ToCharArray();
+
+            for (int i = 0; i < cipari.Length; i++)
+            {
+                char cipars = cipari[i];
+            }
+
+            Console.WriteLine("Ieraksti ciparu kuru meklet");
+            string meklet = Console.ReadLine();
+            char mekle = Convert.ToChar(meklet);
+
+            for (int i = 0; i < cipari.Length; i++)
+            {
+                if (mekle == cipari[i])
+                {
+                    result++;
+                }
+            }
+
+            Console.WriteLine("Dotais cipars paradas " + result + " reizes.");
+        }
+
+        private void Uzdevums35()
+        {
+            Console.WriteLine("Ieraksti skaitli");
+            string input = Console.ReadLine();
+            int garums = Convert.ToInt32(input);
+
+            Console.WriteLine("Ieraksti skaitli");
+            string input2 = Console.ReadLine();
+            int augstums = Convert.ToInt32(input2);
+
+            string zvaigzne = "*";
+            string atstarpe = " ";
+            string atmina = "";
+            int j;
+
+            for (int i = 0; i < garums; i++)
+            {
+                Console.Write(zvaigzne);
+            }
+            Console.WriteLine();
+            for (int b = 0; b < augstums - 2; b++)
+            {
+                Console.Write(zvaigzne);
+
+                for (j = 1; j < garums; j++)
+                {
+                    if (j < garums - 1)
+                    {
+                        Console.Write(atstarpe);
+                    } else
+                    {
+                        Console.Write(zvaigzne);
+                    }
+                } Console.WriteLine();
+            }
+            for (int i = 0; i < garums; i++)
+            {
+                Console.Write(zvaigzne);
+            }
+        }
+
+        private void Uzdevums36()
+        {
+            int[] cipari = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Ieraksti skaitli");
+                string input1 = Console.ReadLine();
+                cipari[i] = Convert.ToInt32(input1);
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = i + 1; j < 3; j++)
+                {
+                    if (cipari[i] > cipari[j])
+                    {
+                        int temp = cipari[i];
+                        cipari[i] = cipari[j];
+                        cipari[j] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Pec sakartosanas");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write(cipari[i]);
+            }
+
+
+        }
+
+        private void Uzdevums37()
+        {
+            int[] skaitli = new int[10];
+            int atmina;
+            atmina = int.MinValue;
+            for (int i = 0; i < 10; i++)
+            {
+
+                Console.WriteLine("Ievadi skaitlus no 1 lidz 100");
+                string ievade = Console.ReadLine();
+                skaitli[i] = Convert.ToInt32(ievade);
+
+                if (skaitli[i] >= 1 & skaitli[i] <= 100)
+                {
+                    if (skaitli[i] > atmina)
+                    {
+                        atmina = skaitli[i];
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nepareiza ievade");
+                    }
+                }
+
+            }
+
+            Console.WriteLine("Lielakais skaitlis ir " + atmina);
+        }
+
+        private void Uzdevums38()                               
+        {
+            int[] skaitli = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Ievadi skaitli no 1 lidz 50");
+                string ievade1 = Console.ReadLine();
+                skaitli[i] = Convert.ToInt32(ievade1);
+            }
+
+            Console.WriteLine("Ievadi skaitli kuru atrast");
+            string ievade = Console.ReadLine();
+            int skaitlis = Convert.ToInt32(ievade);
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (skaitlis == skaitli[i])
+                {
+                    Console.WriteLine(skaitlis + " is in the array");
+
+                }
+            }
+        }
+
+        private void Uzdevums39()
+        {
+
+            int[] kopa = new int[10];
+            int i;
+
+            for( i=0; i<10; i++)
+            {
+                kopa[i] = - 113;
+            }
+            for (i=0; i<10; i++)
+            {
+                Console.WriteLine("Slota " + i + " vertiba ir " + kopa[i]);
+            }
+            
+        }
+
+        private void Uzdevums40()
+        {
+            int[] kopa = new int[10];
+            int i;
+
+            for (i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Iedode vertibu arrayam");
+                string input = Console.ReadLine();
+                kopa[i] = Convert.ToInt32(input);
+            }
+
+            Array.Sort(kopa);
+
+            for (i=0; i<10; i++)
+            {
+                Console.Write(kopa[i]);
+            }
+        }
+
+        private void Uzdevums41()
+        {
+            int a = 0;
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 7, 9, 14 };
+            Console.Write("Array:");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(" " + arr[i]);
+            }
+            Console.WriteLine("");
+            Console.Write("Value to find:");
+            int tofind = int.Parse(Console.ReadLine());
+            for (int i = 0; i < 10; i++)
+            {
+                if (tofind == arr[i])
+                {
+                    a++;
+                }
+            }
+            Console.WriteLine(tofind + " was found " + a + " times");
+        }
+
+        private void Uzdevums43()           //saskaitit vardus ar pedejo burtu y vai z.
+        {
+            int count = 0;
+            Console.WriteLine("Enter a string to check");
+            string Sinput = Console.ReadLine();
+            string[] Words = Sinput.Split(' ');
+            for (int i = 0; i < Words.Length; i++)
+            {
+                if ((Words[i] != "") && ((Words[i][Words[i].Length - 1] == 'y') || (Words[i][Words[i].Length - 1] == 'Y') || (Words[i][Words[i].Length - 1] == 'z') || (Words[i][Words[i].Length - 1] == 'Z')))
+                    count++;
+            }
+            Console.WriteLine("count :" + count);
+        }
+
+        private void Uzdevums44()
+        {
+            int summa = 0;
+            Console.WriteLine("Ieraksti ciparu");
+            string input = Console.ReadLine();
+            int ievade = Convert.ToInt32(input);
+            if (ievade != 0)
+            {
+                for (int i = 0; i <= ievade; i++)
+                {
+                    Console.Write(i);
+                    summa = summa + i;
+                }
+            }
+
+            Console.WriteLine(summa);
+        }
+
+        private void Uzdevums45()
+        {
+
+            Console.WriteLine("Ieraksti vardu");
+            string input = Console.ReadLine();
+            if (input == "Mitchell")
+            {
+                for (int i=0; i<5; i++)
+                {
+                    Console.WriteLine(input);
+                }
+            }
+            for (int i=0; i<10; i++)
+            {
+                Console.WriteLine(input);
+            }
+        }
+
+        private void Uzdevums46()
+        {
+            int randomNum;
+            randomNum = 18;
+
+            int numOfTries = 0;
+            int guess;
+            Console.Write("I am thinking of a number between 1-100. You have 7 guesses:\n");
+
+            while (numOfTries != 8)
+            {
+                numOfTries++;
+                if (numOfTries == 8)
+                {
+                    Console.WriteLine("Sorry you didn't guess it in 7 tries. You lose.");
+                    break;
+                }
+                string input =Console.ReadLine();
+                guess = Convert.ToInt32(input);
+
+                if (guess < randomNum)
+                {
+                    Console.WriteLine("Too Low");
+                    
+                }
+                else
+                {
+                    if (guess > randomNum)
+                    {
+                        Console.WriteLine("Too high");
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Correct.You won!");
+                        break;
+                    }
+                }
+
+            }
+        }
+
+        private void Uzdevums47()
+        {
+
+            for (double x=-10; x<=10; x+=0.5)
+            {
+                double y = x * x;
+                Console.WriteLine(x + " " + y);
+            }
+        }
+
+        private void Uzdevums48()
+        {
+            for (double x = 1; x <= 20; x ++)
+            {
+                if (x % 2 != 0)
+                {
+                    Console.WriteLine(x);
+                }
+                else 
+                {
+                    Console.WriteLine(x +"<");
+                }
+
+            }
+        }
     }
 }
 
